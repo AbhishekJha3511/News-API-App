@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Blog App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()">
+                <img src="assets/newsAilogo.png" alt="newsAILogo.png" class="logo" style="filter: brightness(50);">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link navLink nav-item">Home</li>
+                    <li class="hover-link navLink nav-item">News</li>
+                    <li class="hover-link navLink nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                    <li class="hover-link navLink nav-item" id="election" onclick="onNavItemClick('election')">Election
+                    </li>
+                    <li class="hover-link navLink nav-item" id="technology" onclick="onNavItemClick('technology')">
+                        Technology</li>
+                    <li class="hover-link navLink nav-item">About Us</li>
+                </ul>
+            </div>
+            <div class="search-bar">
+                <form class="form">
+                    <button id="search-btn" onclick="searchBtn()">
+                        <img src="assets/svgs/search.svg" alt="">
+                    </button>
+                    <input id="search-input" class="input" placeholder="e.g. tech" required="" type="text">
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="nav-tags">
+
+                <ul class="flex tags">
+                    <li class="hover-link nav-item" id="india" onclick="onNavItemClick('india')">India</li>
+                    <li class="hover-link nav-item" id="ai" onclick="onNavItemClick('ai')">AI</li>
+                    <li class="hover-link nav-item" id="javascript" onclick="onNavItemClick('javascript')">Javascript</li>
+                    <li class="hover-link nav-item" id="space" onclick="onNavItemClick('space')">Space</li>
+                    <li class="hover-link nav-item" id="electronics" onclick="onNavItemClick('electronics')">Electronics</li>
+                    <li class="hover-link nav-item" id="health" onclick="onNavItemClick('health')">Health</li>
+                    <li class="hover-link nav-item" id="yoga" onclick="onNavItemClick('yoga')">Yoga</li>
+                    <li class="hover-link nav-item" id="business" onclick="onNavItemClick('business')">Business</li>
+                    <li class="hover-link nav-item" id="startups" onclick="onNavItemClick('startups')">Startups</li>
+                    <li class="hover-link nav-item" id="how to" onclick="onNavItemClick('how to')">How to</li>
+                    <li class="hover-link nav-item" id="geography" onclick="onNavItemClick('geography')">Geography</li>
+                    <li class="hover-link nav-item" id="tips tricks" onclick="onNavItemClick('tips tricks')">Tips tricks</li>
+                    <li class="hover-link nav-item" id="japan" onclick="onNavItemClick('japan')">Japan</li>
+                    <li class="hover-link nav-item" id="science" onclick="onNavItemClick('science')">Science</li>
+                    <li class="hover-link nav-item" id="trends" onclick="onNavItemClick('trends')">Trends</li>
+                    <li class="hover-link nav-item" id="computers" onclick="onNavItemClick('computers')">Computers</li>
+                    <li class="hover-link nav-item" id="ideas" onclick="onNavItemClick('ideas')">Ideas</li>
+                    <li class="hover-link nav-item" id="jobs" onclick="onNavItemClick('jobs')">Jobs</li>
+                    <li class="hover-link nav-item" id="sleep" onclick="onNavItemClick('sleep')">Sleep</li>
+                    
+                </ul>
+            </div>
+    </nav>`
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+
+
+        </div>
+    </main>
+    <template id="news-template-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" class="card-img" id="card-img" alt="">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title" id="card-title">Card Title</h3>
+                <h6 class="news-src" id="news-src">Lorem ipsum 20 April 2024</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam libero
+                    tempore, cum soluta nobis est eligendi optio, culpa deserunt mollit anim laborum.</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

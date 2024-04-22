@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --secondary-text-color: #96d3ff;
+  --background-dark-color: #10121a;
+  --background-dark-grey: #191d2b;
+  --border-color: #2e344e;
+  --background-light-color: #f1f1f1;
+  --background-light-color-2: rgba(3, 127, 255, 0.3);
+  --white-color: #fff;
+  --font-light-color: #a4acc4;
+  --font-dark-color: #313131;
+  --font-dark-color-2: #151515;
+  --sidebar-dark-color: #191d2b;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-color);
+}
+p {
+  /* font-size: 1.1rem; */
+  font-family: 'Raleway', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  line-height: 1.4rem;
+  color: var(--font-light-color);
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+ul li a {
+  color: white;
+}
+/* h1,h2,h3,h4,h5,h6{
+    color: var(--white-color);
+    line-height: 1.2;
+    font-family: 'Raleway', sans-serif;
+    color: var(--font-dark-color);
+} */
+/* Utility Classes */
+.flex {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.container {
+  max-width: 1180px; /*This will be the max width of your site*/
+  margin-inline: auto; /*This will center the container*/
+  overflow: hidden;
+}
+/*End of Utility Classes*/
+nav {
+  /* border: 2px solid red; */
+  background: var(--background-dark-color);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.main-nav {
+  justify-content: space-between;
+  padding-block: 8px;
+}
+.logo {
+  width: 120px;
+}
+.nav-links ul {
+  gap: 16px;
+}
+.hover-link {
+  cursor: pointer;
+}
+.hover-link:hover {
+  color: var(--secondary-text-color);
+}
+.hover-link:active {
+  color: rgb(185, 209, 255);
+}
+
+.nav-item.active {
+  color: rgb(255, 255, 255);
+}
+.navLink.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-text-color);
+  margin-top: 4px;
+}
+/* End of Nav */
+/* search btn */
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+/* styling of whole input container */
+.form {
+  --timing: 0.3s;
+  --width-of-input: 200px;
+  --height-of-input: 32px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-color: #2f2ee9;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg, #fff);
+}
+/* styling of Input */
+.input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+/* Hover on Input */
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+/* here is code of animated border */
+.form:focus-within:before {
+  transform: scale(1);
+}
+/* styling of close button */
+/* == you can click the close button to remove text == */
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+/* close button shown when typing */
+input:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+/* sizing svg icons */
+.form svg {
+  width: 17px;
+  margin-top: 3px;
+}
+#search-btn{
+  cursor: pointer;
+}
+/* End of search btn */
+
+main {
+  padding-block: 20px;
+  margin-top: 80px;
+}
+.cards-container {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  align-items: start;
+}
+.card {
+  width: 360px;
+  /* max-width: 300px; */
+  min-height: 400px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 0 4px #2e2e2e;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  box-shadow: 1px 1px 8px #2e2e2e;
+  background-color: rgb(232, 236, 239);
+  transform: translateY(-2px);
+}
+.card a {
+  text-decoration: none;
+}
+
+.card-content {
+  padding: 1.1rem;
+}
+
+.card-img {
+  object-fit: cover;
+  width: 100%;
+  height: 150px;
+  /* background-color: rgb(239, 205, 255); */
+}
+
+.card-title {
+  color: #111827;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.news-desc {
+  margin-top: 0.5rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.nav-tags {
+  display: flex;
+  gap: 18px;
+  /* margin-top: 0.5rem; */
+  overflow-x: auto;
+  flex-direction: column;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.tags {
+  padding: 0.5rem 1rem;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  gap: 4px;
+}
+.tags ul li {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.tags li {
+  padding: 2px 8px;
+  background-color: rgb(13, 13, 14);
+  border-radius: 10px 0 10px 0;
+  color: whitesmoke;
+}
